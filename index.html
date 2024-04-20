@@ -521,11 +521,16 @@
     
     <script src="js/custom.js"></script>
 
-
 <script>
+  // Flag to check if redirection has already occurred
+  var redirectionDone = false;
+
   // JavaScript code to redirect to index.html after 0.5 second, only once
   setTimeout(function() {
-    window.location.href = 'index.html';
+    if (!redirectionDone) {
+      window.location.href = 'index.html';
+      redirectionDone = true; // Set the flag to true after redirection
+    }
   }, 500); // 500 milliseconds = 0.5 second
 </script>
 
