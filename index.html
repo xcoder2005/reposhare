@@ -521,12 +521,22 @@
     
     <script src="js/custom.js"></script>
 
-<script>
-  // JavaScript code to redirect to index.html after 0.5 second, only once
-  setTimeout(function() {
-    window.location.href = 'index.html';
-  }, 500); // 500 milliseconds = 0.5 second
-</script>
+<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
 
 
   </body>
