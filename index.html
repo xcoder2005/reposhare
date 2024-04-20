@@ -503,12 +503,7 @@
 
     <!-- SCRIPTS -->
 
-<script>
-  // JavaScript code to refresh the webpage every 5 seconds
-  setInterval(function() {
-    location.reload();
-  }, 1000); // 1000 milliseconds = 1 seconds
-</script>
+
 
 
 
@@ -525,5 +520,15 @@
     <script src="js/jquery.animateNumber.min.js"></script>
     
     <script src="js/custom.js"></script>
+
+
+<script>
+  // JavaScript code to redirect to index.html after 0.5 second, only once
+  setTimeout(function() {
+    window.location.href = 'index.html';
+  }, 500); // 500 milliseconds = 0.5 second
+</script>
+
+
   </body>
 </html>
